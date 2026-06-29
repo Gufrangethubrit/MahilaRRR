@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Mail, MapPin, Facebook, Instagram, Youtube, Linkedin,
+  MapPin, Phone, Facebook, Instagram, Youtube, Linkedin,
   Heart, LogIn, Menu, X, ChevronDown,
 } from "lucide-react";
 import logoSrc from "@/assets/logo.jpeg";
@@ -59,10 +59,10 @@ const navItems: NavItem[] = [
 ];
 
 const socials = [
-  { I: Facebook, href: "#", label: "Facebook" },
-  { I: Linkedin, href: "#", label: "LinkedIn" },
+  { I: Facebook, href: "https://www.facebook.com/share/1HSWkyYMCb/", label: "Facebook" },
+  { I: Youtube, href: "https://youtube.com/@mahilachetnasamiti", label: "YouTube" },
   { I: Instagram, href: "#", label: "Instagram" },
-  { I: Youtube, href: "#", label: "YouTube" },
+  { I: Linkedin, href: "#", label: "LinkedIn" },
 ];
 
 export default function SiteHeader() {
@@ -74,17 +74,18 @@ export default function SiteHeader() {
       {/* Top utility bar */}
       <div className="bg-navy text-white text-[13px]">
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 h-10 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-5 min-w-0">
+          <div className="flex items-center gap-4 min-w-0">
             <a
-              href="mailto:info@mahilachetnasamiti.org"
-              className="flex items-center gap-2 hover:text-orange transition min-w-0"
+              href="tel:+917373300737"
+              className="flex items-center gap-2 hover:text-orange transition shrink-0"
             >
-              <Mail className="w-3.5 h-3.5 shrink-0" />
-              <span className="truncate">info@mahilachetnasamiti.org</span>
+              <Phone className="w-3.5 h-3.5 shrink-0" />
+              <span>+91 73733 00737</span>
             </a>
-            <span className="hidden md:flex items-center gap-2 text-white/85">
+            <span className="hidden sm:block w-px h-4 bg-white/20" />
+            <span className="hidden lg:flex items-center gap-2 text-white/85">
               <MapPin className="w-3.5 h-3.5 shrink-0" />
-              330-A Nijampur Malhaur, Lucknow – 226028
+              330-A Nijampur Malhaur, Near Amity University, Lucknow – 226028, U.P., India
             </span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
@@ -93,6 +94,8 @@ export default function SiteHeader() {
                 <a
                   key={label}
                   href={href}
+                  target={href !== "#" ? "_blank" : undefined}
+                  rel={href !== "#" ? "noopener noreferrer" : undefined}
                   aria-label={label}
                   className="w-7 h-7 rounded-full bg-white/10 hover:bg-orange flex items-center justify-center transition"
                 >

@@ -4,15 +4,12 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PageHero from "@/components/PageHero";
 import heroBg from "@/assets/herosection/NariSashaktikaran.png";
-import office1 from "@/assets/Featured Projects/SakshamWomenProject.png";
-import office2 from "@/assets/Featured Projects/ShikshaSetuProject.png";
-import office3 from "@/assets/Featured Projects/GramVikasInitiative.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us — Mahila Chetna Samiti" },
-      { name: "description", content: "Get in touch with Mahila Chetna Samiti. Reach our offices in Lucknow, Jaipur and Bhopal." },
+      { name: "description", content: "Get in touch with Mahila Chetna Samiti. Reach our head office in Lucknow." },
       { property: "og:title", content: "Contact Us — Mahila Chetna Samiti" },
       { property: "og:description", content: "We'd love to hear from you." },
     ],
@@ -22,15 +19,9 @@ export const Route = createFileRoute("/contact")({
 
 const info = [
   { icon: Phone, title: "Call Us", lines: ["+91 73733 00737", "Mon - Sat: 9:00 AM - 6:00 PM"], color: "#FF6B00", bg: "#FFF1E5" },
-  { icon: Mail, title: "Email Us", lines: ["info@mahilachetnasamiti.org", "We reply within 24 hours"], color: "#16A34A", bg: "#E8F7EE" },
-  { icon: MapPin, title: "Visit Us", lines: ["330-A Nijampur Malhaur", "Lucknow – 226028, U.P."], color: "#7C3AED", bg: "#F1EAFE" },
+  { icon: Mail, title: "Email Us", lines: ["info@mahilachetnasamiti.org", "support@mahilachetnasamiti.org"], color: "#16A34A", bg: "#E8F7EE" },
+  { icon: MapPin, title: "Visit Us", lines: ["330-A Nijampur Malhaur", "Near Amity University New Campus", "Lucknow – 226028, Uttar Pradesh"], color: "#7C3AED", bg: "#F1EAFE" },
   { icon: Clock, title: "Office Hours", lines: ["Mon - Sat: 9:00 AM - 6:00 PM", "Sunday: Closed"], color: "#2563EB", bg: "#E6EEFB" },
-];
-
-const offices = [
-  { img: office1, label: "Head Office", city: "Lucknow", addr: "330-A Nijampur Malhaur, Lucknow – 226028", phone: "+91 73733 00737", mail: "lucknow@mahilachetnasamiti.org", color: "#7C3AED" },
-  { img: office2, label: "Regional Office", city: "Jaipur, Rajasthan", addr: "456-A, Empowerment Hub, Jaipur – 302001", phone: "+91 87654 32109", mail: "jaipur@mahilachetnasamiti.org", color: "#16A34A" },
-  { img: office3, label: "Field Office", city: "Bhopal, Madhya Pradesh", addr: "789, Seva Bhavan, Bhopal – 462001", phone: "+91 76543 21098", mail: "bhopal@mahilachetnasamiti.org", color: "#FF6B00" },
 ];
 
 const help = [
@@ -108,33 +99,6 @@ function ContactPage() {
               src="https://www.openstreetmap.org/export/embed.html?bbox=80.94%2C26.83%2C81.04%2C26.93&layer=mapnik&marker=26.88%2C80.99"
               className="w-full h-full min-h-[420px] border-0"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Offices */}
-      <section className="py-16 bg-secondary/40">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
-          <div className="text-center">
-            <h2 className="section-title">Our Offices</h2>
-            <div className="mx-auto mt-3 h-1 w-16 bg-orange rounded-full" />
-          </div>
-          <div className="mt-10 grid md:grid-cols-3 gap-6">
-            {offices.map((o) => (
-              <div key={o.city} className="card-soft card-soft-hover overflow-hidden">
-                <img src={o.img} alt={o.city} className="w-full h-[180px] object-cover" />
-                <div className="p-6">
-                  <div className="font-bold font-display text-[18px]" style={{ color: o.color }}>{o.label}</div>
-                  <div className="text-navy font-semibold mt-1">{o.city}</div>
-                  <div className="mt-3 space-y-1.5 text-[13px] text-text-2">
-                    <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-orange flex-shrink-0" />{o.addr}</div>
-                    <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-orange" />{o.phone}</div>
-                    <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-orange" />{o.mail}</div>
-                  </div>
-                  <button className="mt-5 w-full text-white font-semibold rounded-lg py-2.5" style={{ background: o.color }}>Get Directions →</button>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -41,10 +41,10 @@ const about = [
 
 
 const socials = [
-  { I: Facebook, href: "#", label: "Facebook" },
-  { I: Linkedin, href: "#", label: "LinkedIn" },
+  { I: Facebook, href: "https://www.facebook.com/share/1HSWkyYMCb/", label: "Facebook" },
+  { I: Youtube, href: "https://youtube.com/@mahilachetnasamiti", label: "YouTube" },
   { I: Instagram, href: "#", label: "Instagram" },
-  { I: Youtube, href: "#", label: "YouTube" },
+  { I: Linkedin, href: "#", label: "LinkedIn" },
 ];
 
 function LinkCol({
@@ -126,6 +126,8 @@ export default function SiteFooter() {
               <a
                 key={label}
                 href={href}
+                target={href !== "#" ? "_blank" : undefined}
+                rel={href !== "#" ? "noopener noreferrer" : undefined}
                 aria-label={label}
                 className="w-10 h-10 rounded-full border border-white/25 hover:bg-orange hover:border-orange flex items-center justify-center transition-all hover:-translate-y-0.5"
               >
@@ -157,12 +159,20 @@ export default function SiteFooter() {
               <span className="w-9 h-9 rounded-full border border-white/25 flex items-center justify-center flex-shrink-0">
                 <Mail className="w-4 h-4 text-orange" />
               </span>
-              <a
-                href="mailto:info@mahilachetnasamiti.org"
-                className="text-white/85 hover:text-orange transition break-all"
-              >
-                info@mahilachetnasamiti.org
-              </a>
+              <div className="flex flex-col gap-1">
+                <a
+                  href="mailto:info@mahilachetnasamiti.org"
+                  className="text-white/85 hover:text-orange transition break-all"
+                >
+                  info@mahilachetnasamiti.org
+                </a>
+                <a
+                  href="mailto:support@mahilachetnasamiti.org"
+                  className="text-white/85 hover:text-orange transition break-all"
+                >
+                  support@mahilachetnasamiti.org
+                </a>
+              </div>
             </li>
             <li className="flex items-center gap-3">
               <span className="w-9 h-9 rounded-full border border-white/25 flex items-center justify-center flex-shrink-0">

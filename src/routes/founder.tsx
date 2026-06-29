@@ -4,7 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PageHero from "@/components/PageHero";
 import heroBg from "@/assets/herosection/NariSashaktikaran.png";
-import founderImg from "@/assets/founder-portrait.jpg";
+import founderImg from "@/assets/founderImg.png";
 
 export const Route = createFileRoute("/founder")({
   head: () => ({

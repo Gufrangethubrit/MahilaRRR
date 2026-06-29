@@ -1,7 +1,9 @@
-import program1 from "@/assets/program-1.jpg";
-import program2 from "@/assets/program-2.jpg";
-import program3 from "@/assets/program-3.jpg";
-import program4 from "@/assets/program-4.jpg";
+import sakshamImg from "@/assets/Featured Projects/SakshamWomenProject.png";
+import shikshaImg from "@/assets/Featured Projects/ShikshaSetuProject.png";
+import swasthyaImg from "@/assets/Featured Projects/SwasthyaSurakshaProject.png";
+import gramVikasImg from "@/assets/Featured Projects/GramVikasInitiative.png";
+import eduSupportImg from "@/assets/Our Programs/EducationSupportInitiative.png";
+import womenEmpImg from "@/assets/Our Programs/WomenEmpowermentProgram.png";
 
 export type Project = {
   slug: string;
@@ -22,7 +24,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "saksham-women-project",
-    img: program1,
+    img: sakshamImg,
     title: "Saksham Women Project",
     desc: "Empowering women through skill training, leadership and entrepreneurship support.",
     impact: "2,500+ Women",
@@ -55,7 +57,7 @@ export const projects: Project[] = [
   },
   {
     slug: "shiksha-setu-project",
-    img: program2,
+    img: shikshaImg,
     title: "Shiksha Setu Project",
     desc: "Supporting education for children in rural and underserved areas across India.",
     impact: "1,000+ Children",
@@ -88,7 +90,7 @@ export const projects: Project[] = [
   },
   {
     slug: "swasthya-suraksha-project",
-    img: program3,
+    img: swasthyaImg,
     title: "Swasthya Suraksha Project",
     desc: "Free health check-up camps and awareness drives for villages and communities.",
     impact: "5,000+ Beneficiaries",
@@ -121,7 +123,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gram-vikas-initiative",
-    img: program4,
+    img: gramVikasImg,
     title: "Gram Vikas Initiative",
     desc: "Working for sustainable rural development, livelihoods and infrastructure.",
     impact: "40+ Villages",
@@ -154,7 +156,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bal-suraksha-mission",
-    img: program2,
+    img: eduSupportImg,
     title: "Bal Suraksha Mission",
     desc: "Child safety, nutrition and early-childhood development programs.",
     impact: "3,000+ Children",
@@ -187,7 +189,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sakhi-legal-aid",
-    img: program1,
+    img: womenEmpImg,
     title: "Sakhi Legal Aid",
     desc: "Free legal counseling and rights awareness for women across UP and beyond.",
     impact: "1,200+ Cases",

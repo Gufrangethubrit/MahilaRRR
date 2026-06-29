@@ -23,10 +23,11 @@ import project1 from "@/assets/Featured Projects/SakshamWomenProject.png";
 import project2 from "@/assets/Featured Projects/ShikshaSetuProject.png";
 import project3 from "@/assets/Featured Projects/SwasthyaSurakshaProject.png";
 import project4 from "@/assets/Featured Projects/GramVikasInitiative.png";
+import ctaVolunteer from "@/assets/cta-volunteer.jpg";
 import story1 from "@/assets/story-1.jpg";
+import founderImg from "@/assets/founderImg.png";
 import story2 from "@/assets/story-2.jpg";
 import story3 from "@/assets/story-3.jpg";
-import ctaVolunteer from "@/assets/cta-volunteer.jpg";
 import ctaMember from "@/assets/cta-member.jpg";
 import gallery1 from "@/assets/Causes/GirlChildEducation.png";
 import gallery2 from "@/assets/Blogs/HealthAwareness.png";
@@ -273,7 +274,7 @@ function Index() {
             <div className="relative mx-auto lg:mx-0">
               <div className="absolute -inset-3 bg-gradient-to-br from-orange/40 to-purple/30 rounded-[32px] blur-xl animate-pulse-soft" />
               <div className="relative rounded-[28px] overflow-hidden img-zoom shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] border-4 border-white">
-                <img src={story1} alt="Founder Sunita Sharma" className="w-[320px] h-[400px] object-cover" />
+                <img src={founderImg} alt="Founder Sunita Sharma" className="w-[320px] h-[400px] object-cover" />
               </div>
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-2xl px-5 py-3 shadow-xl border border-border text-center min-w-[220px]">
                 <div className="font-display font-extrabold text-navy">Sunita Sharma</div>
@@ -284,31 +285,20 @@ function Index() {
               </div>
             </div>
             <div className="relative">
-              <Quote className="absolute -top-4 -left-2 w-16 h-16 text-orange/15" />
-              <p className="relative text-[16px] sm:text-[17px] leading-[1.85] text-text font-medium italic">
-                "When I founded Mahila Chetna Samiti in 1997, I had one belief — that real change begins when women find their voice. Today that belief has touched 25,000+ lives across 500+ villages. Every woman who starts her own business, every child who returns to school, every village that moves toward better health — that is our true wealth."
-              </p>
-              <p className="mt-4 text-text-2 leading-relaxed">
-                This journey continues. With your love and support, we will build a society where every woman, every child and every community gets the opportunity they deserve.
-              </p>
-              <div className="mt-7 grid sm:grid-cols-3 gap-4">
-                {[
-                  { num: "25+", label: "Years of Service" },
-                  { num: "25K+", label: "Lives Touched" },
-                  { num: "500+", label: "Villages Reached" },
-                ].map((s) => (
-                  <div key={s.label} className="card-soft p-4 text-center hover-lift">
-                    <div className="text-orange font-extrabold text-[24px] font-display">{s.num}</div>
-                    <div className="text-text-2 text-[12px] mt-0.5">{s.label}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 flex items-center gap-4">
-                <svg viewBox="0 0 200 60" className="h-12 text-navy" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M10 40 Q 30 10 50 35 T 90 30 Q 110 50 130 25 T 180 35" />
-                </svg>
-                <div className="text-[13px] text-text-2">Signature</div>
-              </div>
+              {/* <Quote className="absolute -top-4 -left-2 w-16 h-16 text-orange/15" /> */}
+              <p className="relative text-[16px] sm:text-[17px] leading-[1.85] text-text font-medium">
+                When I founded Mahila Chetna Samiti in 1997, I had one belief — that real change begins when women find their voice. Today that belief has touched 25,000+ lives across 500+ villages. Every woman who starts her own business, every child who returns to school, every village that moves toward better health — that is our true wealth.
+              </p> 
+<br/>
+              <p className="relative text-[16px] sm:text-[17px] leading-[1.85] text-text font-medium  ">
+  Mahila Chetna Samiti was founded with a mission to empower women and uplift rural communities through education, skill development, healthcare, and sustainable livelihoods.  
+</p>
+<br/>
+              <p className="relative text-[16px] sm:text-[17px] leading-[1.85] text-text font-medium  ">
+    Every woman who gains confidence, every child who receives an education, and every family that moves toward a brighter future strengthens our commitment to building an inclusive and self-reliant society.
+</p>
+                
+               
             </div>
           </div>
         </div>
@@ -387,7 +377,7 @@ function Index() {
             <div className="eyebrow text-purple" style={{ color: "#7C3AED" }}>Success Stories</div>
             <h2 className="section-title mt-2">Stories Of Transformation</h2>
             <p className="mt-3 text-text-2 text-[14px] leading-relaxed">Real stories from real people whose lives have been changed through our initiatives.</p>
-            <Link to="/blogs" className="btn-navy-outline mt-5">Read More Stories <ArrowRight className="w-4 h-4" /></Link>
+            <Link to="/success-stories" className="btn-navy-outline mt-5">Read More Stories <ArrowRight className="w-4 h-4" /></Link>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {stories.map((s) => (
@@ -857,7 +847,7 @@ function Index() {
           <Carousel opts={{ align: "start", loop: true }} className="mt-14 px-2">
             <CarouselContent className="-ml-4 pb-4">
               {[
-                { name: "Sunita Sharma", role: "Founder & Secretary", img: story1, accent: "#FF6B00" },
+                { name: "Sunita Sharma", role: "Founder & Secretary", img: founderImg, accent: "#FF6B00" },
                 { name: "Anita Verma", role: "Program Director", img: story2, accent: "#0B1F3A" },
                 { name: "Rekha Singh", role: "Community Lead", img: story3, accent: "#FF8C00" },
                 { name: "Priya Yadav", role: "Education Head", img: story1, accent: "#2E7D32" },

@@ -7,6 +7,7 @@ import aboutGroup from "@/assets/about/about.png";
 import story1 from "@/assets/story-1.jpg";
 import story2 from "@/assets/story-2.jpg";
 import story3 from "@/assets/story-3.jpg";
+import founderImg from "@/assets/founderImg.png";
 import heroBg from "@/assets/herosection/NariSashaktikaran.png";
 
 export const Route = createFileRoute("/about")({
@@ -28,7 +29,7 @@ const pillars = [
 ];
 
 const team = [
-  { name: "Sunita Sharma", role: "Founder & President", img: story1, accent: "#FF6B00" },
+  { name: "Sunita Sharma", role: "Founder & President", img: founderImg, accent: "#FF6B00" },
   { name: "Anita Verma", role: "Program Director", img: story2, accent: "#0B1F3A" },
   { name: "Rekha Singh", role: "Community Lead", img: story3, accent: "#FF8C00" },
   { name: "Priya Yadav", role: "Education Head", img: story1, accent: "#2E7D32" },
