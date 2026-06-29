@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import { ComposableMap, Geographies, Geography } from "@vnedyalk0v/react19-simple-maps";
 import { MapPin, Users, Briefcase, GraduationCap, ArrowRight } from "lucide-react";
 import topo from "@/assets/india-states.topo.json";
 
